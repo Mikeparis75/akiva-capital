@@ -1270,8 +1270,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     headers: { 'Accept': 'application/json' }
   });
   if (response.ok) {
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    form.innerHTML = '<div class="form-success" style="display:block;padding:20px;border:1px solid rgba(201,168,76,0.3);background:rgba(201,168,76,0.05);color:var(--gold-light);">✓ Message envoyé avec succès. Nous vous contacterons bientôt.</div>';
   }
 });
 
