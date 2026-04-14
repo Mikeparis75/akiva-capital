@@ -1261,32 +1261,7 @@ document.addEventListener('keydown', e => {
 
 // ===================== CONTACT FORM =====================
 function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  
-  // Send via Formspree (replace XXXX with your Formspree endpoint)
-  // OR just show success message (email is handled server-side, not exposed)
-  // Using a simple mailto approach that hides the email:
-  
-  const name = data.get('name');
-  const email = data.get('email');
-  const subject = data.get('subject') || 'Contacto via website';
-  const message = data.get('message');
-  
-  // Use Web3Forms or Formspree — the email stays hidden server-side
-  // For demonstration: show success message
-  // In production: replace with fetch to your form endpoint
-  
-  const submitBtn = form.querySelector('.btn-submit');
-  submitBtn.disabled = true;
-  submitBtn.style.opacity = '0.6';
-  
-  // Simulate async send (replace with actual endpoint)
-  setTimeout(() => {
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }, 800);
+  return true;
 }
 </script>
 </body>
